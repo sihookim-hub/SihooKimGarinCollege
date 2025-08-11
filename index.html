@@ -4,13 +4,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Mr Kim VRscene</title>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
 </head>
 
 <body>
-  Hello world
-  <script src="script.js"></script>
+<a-scene>
+  <!-- Assets -->
+  <a-assets>
+    <img id="kimchi" src="images/kimchi.jpg" title="kimchi from pixabay" preload="auto">
+    <img id="korea" src="images/korea.jpg" title="korea from pixabay" preload="auto">
+    <img id="computer" src="images/computer.jpg" title="computer from pixabay" preload="auto">
+    <img id="dog" src="images/dog.jpg" title="dog from pixabay" preload="auto">
+    <img id="gun" src="images/gun.jpg" title="gun from pixabay" preload="auto"
+
+  </a-assets>
+  <!-- environment -->
+  <a-entity environment="preset: goldmine; dressingAmount: 150; skyColor:blue "></a-entity>
+  <!--Museum-->
+  <!-- Museum floor -->
+  <a-box id="floor" position="0 0 0" scale="10.5 10.5 0.5" color="black" rotation="90 0 0" ></a-box>
+  <!-- Museum walls -->
+  <a-box id="wall1" position="0 1.473 4.907" rotation="0 0 0" scale="10 3 0.2" color="gold"></a-box>
+  <a-box id="wall2" position="0 1.473 -4.907" rotation="0 0 0" scale="10 3 0.2" color="gold"></a-box>
+  <a-box id="wall3" position="5.049 1.454 -0.008" rotation="0 -90 0" scale="10 3 0.2" color="gold"></a-box>
+  <a-box id="wall4" position="-5.049 1.454 -0.008" rotation="0 -90 0" scale="10 3 0.2" color="gold"></a-box>
+  <!-- Museum roof -->
+  <a-cylinder id="roof1Front" segments-radial="3" position="0 3.874 4.907" rotation="-90 0 0" scale="5.774 0.2 1.8" color="yellow"></a-cylinder>
+    <a-cylinder id="roof2Back" segments-radial="3" position="0 3.874 -4.907" rotation="-90 0 0" scale="5.774 0.2 1.8" color="yellow"></a-cylinder>
+    <a-box id="roof_right3" position="2.580 4.328 0" rotation="28.433 90 0" scale="10.931 0.20 6.110" color="yellow"></a-box>
+    <a-box id="roof_left4" position="-2.599 4.321 -0.017" rotation="28.433 -90 0" scale="10.931 0.20 6.130" color="yellow"></a-box>
+  <!--end of Museum-->
+  <!--Start of Art-->
+  <!--Frame 1-->
+  <!--Art1-->
+  <a-plane id="art1" src="images/kimchi.jpg" scale="2 2 0.05" rotation="0 0 0" position="2.828 1.934 -4.792"></a-plane>
+  <!--Art2-->
+  <a-plane id="art2" src="images/korea.jpg" scale="2.536 2.902 0.050" rotation="0 -180 0" position="-0.234 2.192 4.656"></a-plane>
+  <!--Art3-->
+  <a-plane id="art3" src="images/computer.jpg" scale="2 2 0.05" rotation="0 90 0" position="-4.929 1.586 0.427"></a-plane>
+  <!--Art4-->
+  <a-plane id="art4" src="images/dog.jpg" scale="2 2 0.05" rotation="0 -90 0" position="4.760 1.652 0.575"></a-plane>
+  <!--Art5-->
+  <a-plane id="art5" src="images/gun.jpg" scale="2 2 0.05" rotation="0 0 0" position="-3.087 1.660 -4.789"></a-plane>
+  <!--end of Art-->
+  <!--Start of 3D object-->
+  <a-obj-model id="3dModel1" src="images/tinker.obj" mtl="images/obj.mtl" position="0 0 0" rotation="-90 0 0" scale="1 1 1"></a-obj-model
+
+</a-scene> 
 </body>
 
 </html>
